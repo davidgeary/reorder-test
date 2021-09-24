@@ -1,0 +1,7 @@
+{
+  "name": "reorder-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
