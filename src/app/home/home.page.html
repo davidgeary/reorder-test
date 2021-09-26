@@ -1,20 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Reorder Test</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <swiper>
+    <ng-template swiperSlide>
+      <p></p>
+      <ul>
+        <li>Open the browser's DevTools</li>
+        <li>If not already in mobile/responsive mode, click the 'Toggle device toolbar' (Chrome)/'Responsive Design Mode' (Firefox) button (or press <code>Ctrl + Shift + M</code>)</li>
+        <li>Swipe to the next slide to access the <code>ion-reorder</code> component</li>
+      </ul>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-list>
+        <ion-reorder-group (ionItemReorder)="reorderItems($event)" disabled="false">
+          <ion-item>
+            <ion-label>Item 1</ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+          <ion-item>
+            <ion-label>Item 2</ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+          <ion-item>
+            <ion-label>Item 3</ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+          <ion-item>
+            <ion-label>Item 4</ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+        </ion-reorder-group>
+      </ion-list>
+    </ng-template>
+  </swiper>
 </ion-content>
